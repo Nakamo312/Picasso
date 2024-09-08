@@ -10,11 +10,11 @@ class Canvas(QLabel):
         self.y_mouze: int = None
         self.pen_size: int = 4
         self.pen_color = QColor("#00000")
+        self.pen_color_cashed = self.pen_color
         pixmap = QPixmap(w,h)
         pixmap.fill(Qt.GlobalColor.white)
         self.setPixmap(pixmap)
         self.label = QLabel()
-        self.set_text("ACTION")
         self.set_font_size(30)
         self.label.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
 
